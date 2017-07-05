@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.8" jmeter="2.13 r1665067">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="ProfileService_BIZ" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">50</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">100</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">2</stringProp>
+        <longProp name="ThreadGroup.start_time">1454945235000</longProp>
+        <longProp name="ThreadGroup.end_time">1454945235000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CreateProfile" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;candidate&quot;: {&#xd;
+&#xd;
+    &quot;firstName&quot;: &quot;Santosh&quot;,&#xd;
+    &quot;middleName&quot;: null,&#xd;
+    &quot;lastName&quot;: &quot;Kumar&quot;,&#xd;
+    &quot;genderDisplay&quot;: null,&#xd;
+    &quot;genderCode&quot;: null,&#xd;
+    &quot;currentRole&quot;: null,&#xd;
+    &quot;currentDomain&quot;: &quot;Retail&quot;,&#xd;
+    &quot;dateOfBirth&quot;: null,&#xd;
+    &quot;noticePeriodDays&quot;: null,&#xd;
+    &quot;totalExperienceMnth&quot;: 96,&#xd;
+    &quot;experienceInCurrentRoleMnth&quot;: 12,&#xd;
+    &quot;experienceInCurrentDomainMnth&quot;: null,&#xd;
+    &quot;currentCtc&quot;: null,&#xd;
+    &quot;currentCtcCurrencyName&quot;: null,&#xd;
+    &quot;currentCtcCurrencyCode&quot;: null,&#xd;
+    &quot;expectedCtc&quot;: null,&#xd;
+    &quot;expectedCtcCurrencyName&quot;: null,&#xd;
+    &quot;expectedCtcCurrencyCode&quot;: null,&#xd;
+    &quot;status&quot;: null,&#xd;
+    &quot;statusCode&quot;: null,&#xd;
+    &quot;primaryEmailId&quot;: &quot;yogesh@spire2grow.comm&quot;,&#xd;
+    &quot;primaryEmailIdType&quot;: null,&#xd;
+    &quot;secondaryEmailId&quot;: null,&#xd;
+    &quot;secondaryEmailIdType&quot;: null,&#xd;
+    &quot;primaryContactNumberCountryCode&quot;: null,&#xd;
+    &quot;primaryContactNumber&quot;: null,&#xd;
+    &quot;primaryContactNumberType&quot;: null,&#xd;
+    &quot;secondaryContactNumberCountryCode&quot;: null,&#xd;
+    &quot;secondaryContactNumber&quot;: null,&#xd;
+    &quot;secondaryContactNumberType&quot;: null,&#xd;
+    &quot;locationId&quot;: null,&#xd;
+    &quot;locationName&quot;: &quot;Mysore&quot;,&#xd;
+    &quot;locationType&quot;: null,&#xd;
+    &quot;prefLocation1Id&quot;: null,&#xd;
+    &quot;prefLocation1Name&quot;: null,&#xd;
+    &quot;prefLocation1Type&quot;: null,&#xd;
+    &quot;prefLocation2Id&quot;: null,&#xd;
+    &quot;prefLocation2Name&quot;: null,&#xd;
+    &quot;prefLocation2Type&quot;: null,&#xd;
+    &quot;prefLocation3Id&quot;: null,&#xd;
+    &quot;prefLocation3Name&quot;: null,&#xd;
+    &quot;prefLocation3Type&quot;: null,&#xd;
+    &quot;clientCreatedOn&quot;: null,&#xd;
+    &quot;clientUpdatedOn&quot;: null,&#xd;
+    &quot;sourceName&quot;: null,&#xd;
+    &quot;sourceNameId&quot;: null,&#xd;
+    &quot;sourceType&quot;: null,&#xd;
+    &quot;sourceTypeId&quot;: null,&#xd;
+    &quot;createdBy&quot;: null,&#xd;
+    &quot;createdOn&quot;: null,&#xd;
+    &quot;updatedBy&quot;: null,&#xd;
+    &quot;updatedOn&quot;: null,&#xd;
+    &quot;flowId&quot;: &quot;createdWithWebScraper&quot;,&#xd;
+    &quot;duplicate&quot;: null,&#xd;
+    &quot;requisitionIds&quot;: null,&#xd;
+    &quot;entityAddressBean&quot;: null,&#xd;
+    &quot;candidateEducationMapBean&quot;: {&#xd;
+      &quot;links&quot;: null,&#xd;
+      &quot;items&quot;: [{&#xd;
+        &quot;id&quot;: null,&#xd;
+        &quot;candidateId&quot;: null,&#xd;
+        &quot;instituteId&quot;: null,&#xd;
+        &quot;instituteName&quot;: &quot;BIT&quot;,&#xd;
+        &quot;instituteAddressId&quot;: null,&#xd;
+        &quot;degreeId&quot;: null,&#xd;
+        &quot;degreeName&quot;: &quot;PHD&quot;,&#xd;
+        &quot;major&quot;: null,&#xd;
+        &quot;enrolledDate&quot;: &quot;2013-01-01&quot;,&#xd;
+        &quot;passoutDate&quot;: null,&#xd;
+        &quot;gradeTypeId&quot;: null,&#xd;
+        &quot;gradeTypeName&quot;: null,&#xd;
+        &quot;gradeMaxValue&quot;: null,&#xd;
+        &quot;isHighestDegree&quot;: null,&#xd;
+        &quot;createdBy&quot;: null,&#xd;
+        &quot;createdOn&quot;: null,&#xd;
+        &quot;updatedBy&quot;: null,&#xd;
+        &quot;updatedOn&quot;: null,&#xd;
+        &quot;flowId&quot;: null&#xd;
+      }, {&#xd;
+        &quot;id&quot;: null,&#xd;
+        &quot;candidateId&quot;: null,&#xd;
+        &quot;instituteId&quot;: null,&#xd;
+        &quot;instituteName&quot;: &quot;PSG Academy&quot;,&#xd;
+        &quot;instituteAddressId&quot;: null,&#xd;
+        &quot;degreeId&quot;: null,&#xd;
+        &quot;degreeName&quot;: &quot;BE&quot;,&#xd;
+        &quot;major&quot;: null,&#xd;
+        &quot;enrolledDate&quot;: &quot;2011-01-01&quot;,&#xd;
+        &quot;passoutDate&quot;: null,&#xd;
+        &quot;gradeTypeId&quot;: null,&#xd;
+        &quot;gradeTypeName&quot;: null,&#xd;
+        &quot;gradeMaxValue&quot;: null,&#xd;
+        &quot;isHighestDegree&quot;: null,&#xd;
+        &quot;createdBy&quot;: null,&#xd;
+        &quot;createdOn&quot;: null,&#xd;
+        &quot;updatedBy&quot;: null,&#xd;
+        &quot;updatedOn&quot;: null,&#xd;
+        &quot;flowId&quot;: null&#xd;
+      }, {&#xd;
+        &quot;id&quot;: null,&#xd;
+        &quot;candidateId&quot;: null,&#xd;
+        &quot;instituteId&quot;: null,&#xd;
+        &quot;instituteName&quot;: &quot;Russell Road College&quot;,&#xd;
+        &quot;instituteAddressId&quot;: null,&#xd;
+        &quot;degreeId&quot;: null,&#xd;
+        &quot;degreeName&quot;: &quot;MS&quot;,&#xd;
+        &quot;major&quot;: null,&#xd;
+        &quot;enrolledDate&quot;: &quot;1996-01-01&quot;,&#xd;
+        &quot;passoutDate&quot;: null,&#xd;
+        &quot;gradeTypeId&quot;: null,&#xd;
+        &quot;gradeTypeName&quot;: null,&#xd;
+        &quot;gradeMaxValue&quot;: null,&#xd;
+        &quot;isHighestDegree&quot;: null,&#xd;
+        &quot;createdBy&quot;: null,&#xd;
+        &quot;createdOn&quot;: null,&#xd;
+        &quot;updatedBy&quot;: null,&#xd;
+        &quot;updatedOn&quot;: null,&#xd;
+        &quot;flowId&quot;: null&#xd;
+      }, {&#xd;
+        &quot;id&quot;: null,&#xd;
+        &quot;candidateId&quot;: null,&#xd;
+        &quot;instituteId&quot;: null,&#xd;
+        &quot;instituteName&quot;: &quot;Framesby High School&quot;,&#xd;
+        &quot;instituteAddressId&quot;: null,&#xd;
+        &quot;degreeId&quot;: null,&#xd;
+        &quot;degreeName&quot;: &quot;Grade 12&quot;,&#xd;
+        &quot;major&quot;: null,&#xd;
+        &quot;enrolledDate&quot;: &quot;1990-01-01&quot;,&#xd;
+        &quot;passoutDate&quot;: null,&#xd;
+        &quot;gradeTypeId&quot;: null,&#xd;
+        &quot;gradeTypeName&quot;: null,&#xd;
+        &quot;gradeMaxValue&quot;: null,&#xd;
+        &quot;isHighestDegree&quot;: null,&#xd;
+        &quot;createdBy&quot;: null,&#xd;
+        &quot;createdOn&quot;: null,&#xd;
+        &quot;updatedBy&quot;: null,&#xd;
+        &quot;updatedOn&quot;: null,&#xd;
+        &quot;flowId&quot;: null&#xd;
+      }],&#xd;
+      &quot;hasMore&quot;: false,&#xd;
+      &quot;totalResults&quot;: 0&#xd;
+    },&#xd;
+    &quot;candidateEmployerMapBean&quot;: {&#xd;
+      &quot;links&quot;: null,&#xd;
+      &quot;items&quot;: [{&#xd;
+        &quot;id&quot;: null,&#xd;
+        &quot;candidateId&quot;: null,&#xd;
+        &quot;employerName&quot;: &quot;KFC&quot;,&#xd;
+        &quot;employerId&quot;: null,&#xd;
+        &quot;employmentTypeId&quot;: null,&#xd;
+        &quot;employmentTypeName&quot;: null,&#xd;
+        &quot;employerAddressId&quot;: null,&#xd;
+        &quot;designationId&quot;: null,&#xd;
+        &quot;designationName&quot;: &quot;Branch Manager&quot;,&#xd;
+        &quot;startDate&quot;: &quot;2013-03-01&quot;,&#xd;
+        &quot;endDate&quot;: &quot;2015-03-01&quot;,&#xd;
+        &quot;isCurrentEmployer&quot;: &quot;Y&quot;,&#xd;
+        &quot;currentCtc&quot;: null,&#xd;
+        &quot;currentFixedSalary&quot;: null,&#xd;
+        &quot;currentVariableSalary&quot;: null,&#xd;
+        &quot;currentCtcCurrency&quot;: null,&#xd;
+        &quot;currentCtcCurrencyCode&quot;: null,&#xd;
+        &quot;employerIndexStart&quot;: null,&#xd;
+        &quot;employerIndexEnd&quot;: null,&#xd;
+        &quot;createdBy&quot;: null,&#xd;
+        &quot;createdOn&quot;: null,&#xd;
+        &quot;updatedBy&quot;: null,&#xd;
+        &quot;updatedOn&quot;: null,&#xd;
+        &quot;flowId&quot;: null&#xd;
+      }, {&#xd;
+        &quot;id&quot;: null,&#xd;
+        &quot;candidateId&quot;: null,&#xd;
+        &quot;employerName&quot;: &quot;Domino&quot;,&#xd;
+        &quot;employerId&quot;: null,&#xd;
+        &quot;employmentTypeId&quot;: null,&#xd;
+        &quot;employmentTypeName&quot;: null,&#xd;
+        &quot;employerAddressId&quot;: null,&#xd;
+        &quot;designationId&quot;: null,&#xd;
+        &quot;designationName&quot;: &quot;Sales Executive&quot;,&#xd;
+        &quot;startDate&quot;: &quot;2011-01-01&quot;,&#xd;
+        &quot;endDate&quot;: &quot;2013-01-01&quot;,&#xd;
+        &quot;isCurrentEmployer&quot;: &quot;N&quot;,&#xd;
+        &quot;currentCtc&quot;: null,&#xd;
+        &quot;currentFixedSalary&quot;: null,&#xd;
+        &quot;currentVariableSalary&quot;: null,&#xd;
+        &quot;currentCtcCurrency&quot;: null,&#xd;
+        &quot;currentCtcCurrencyCode&quot;: null,&#xd;
+        &quot;employerIndexStart&quot;: null,&#xd;
+        &quot;employerIndexEnd&quot;: null,&#xd;
+        &quot;createdBy&quot;: null,&#xd;
+        &quot;createdOn&quot;: null,&#xd;
+        &quot;updatedBy&quot;: null,&#xd;
+        &quot;updatedOn&quot;: null,&#xd;
+        &quot;flowId&quot;: null&#xd;
+      }, {&#xd;
+        &quot;id&quot;: null,&#xd;
+        &quot;candidateId&quot;: null,&#xd;
+        &quot;employerName&quot;: &quot;Hereford Group&quot;,&#xd;
+        &quot;employerId&quot;: null,&#xd;
+        &quot;employmentTypeId&quot;: null,&#xd;
+        &quot;employmentTypeName&quot;: null,&#xd;
+        &quot;employerAddressId&quot;: null,&#xd;
+        &quot;designationId&quot;: null,&#xd;
+        &quot;designationName&quot;: &quot;Financial Planner&quot;,&#xd;
+        &quot;startDate&quot;: &quot;2010-01-01&quot;,&#xd;
+        &quot;endDate&quot;: &quot;2011-01-01&quot;,&#xd;
+        &quot;isCurrentEmployer&quot;: &quot;N&quot;,&#xd;
+        &quot;currentCtc&quot;: null,&#xd;
+        &quot;currentFixedSalary&quot;: null,&#xd;
+        &quot;currentVariableSalary&quot;: null,&#xd;
+        &quot;currentCtcCurrency&quot;: null,&#xd;
+        &quot;currentCtcCurrencyCode&quot;: null,&#xd;
+        &quot;employerIndexStart&quot;: null,&#xd;
+        &quot;employerIndexEnd&quot;: null,&#xd;
+        &quot;createdBy&quot;: null,&#xd;
+        &quot;createdOn&quot;: null,&#xd;
+        &quot;updatedBy&quot;: null,&#xd;
+        &quot;updatedOn&quot;: null,&#xd;
+        &quot;flowId&quot;: null&#xd;
+      }],&#xd;
+      &quot;hasMore&quot;: false,&#xd;
+      &quot;totalResults&quot;: 0&#xd;
+    },&#xd;
+    &quot;candidateJobFamilyMapBean&quot;: null,&#xd;
+    &quot;candidateSkillMapBean&quot;: {&#xd;
+      &quot;links&quot;: null,&#xd;
+      &quot;items&quot;: [{&#xd;
+        &quot;id&quot;: null,&#xd;
+        &quot;candidateId&quot;: null,&#xd;
+        &quot;skill&quot;: &quot;Run1&quot;,&#xd;
+        &quot;skillExprncMnth&quot;: null,&#xd;
+        &quot;skillPrfcncy&quot;: null,&#xd;
+        &quot;skillStrength&quot;: 1.0,&#xd;
+        &quot;skillOccurrence&quot;: null,&#xd;
+        &quot;skillIndex&quot;: null,&#xd;
+        &quot;skillRecencyGap&quot;: null,&#xd;
+        &quot;createdBy&quot;: null,&#xd;
+        &quot;createdOn&quot;: null,&#xd;
+        &quot;updatedBy&quot;: null,&#xd;
+        &quot;updatedOn&quot;: null,&#xd;
+        &quot;flowId&quot;: null&#xd;
+      }, {&#xd;
+        &quot;id&quot;: null,&#xd;
+        &quot;candidateId&quot;: null,&#xd;
+        &quot;skill&quot;: &quot;run2&quot;,&#xd;
+        &quot;skillExprncMnth&quot;: null,&#xd;
+        &quot;skillPrfcncy&quot;: null,&#xd;
+        &quot;skillStrength&quot;: 0.8,&#xd;
+        &quot;skillOccurrence&quot;: null,&#xd;
+        &quot;skillIndex&quot;: null,&#xd;
+        &quot;skillRecencyGap&quot;: null,&#xd;
+        &quot;createdBy&quot;: null,&#xd;
+        &quot;createdOn&quot;: null,&#xd;
+        &quot;updatedBy&quot;: null,&#xd;
+        &quot;updatedOn&quot;: null,&#xd;
+        &quot;flowId&quot;: null&#xd;
+      }, {&#xd;
+        &quot;id&quot;: null,&#xd;
+        &quot;candidateId&quot;: null,&#xd;
+        &quot;skill&quot;: &quot;TestMaster&quot;,&#xd;
+        &quot;skillExprncMnth&quot;: null,&#xd;
+        &quot;skillPrfcncy&quot;: null,&#xd;
+        &quot;skillStrength&quot;: 0.8,&#xd;
+        &quot;skillOccurrence&quot;: null,&#xd;
+        &quot;skillIndex&quot;: null,&#xd;
+        &quot;skillRecencyGap&quot;: null,&#xd;
+        &quot;createdBy&quot;: null,&#xd;
+        &quot;createdOn&quot;: null,&#xd;
+        &quot;updatedBy&quot;: null,&#xd;
+        &quot;updatedOn&quot;: null,&#xd;
+        &quot;flowId&quot;: null&#xd;
+      }, {&#xd;
+        &quot;id&quot;: null,&#xd;
+        &quot;candidateId&quot;: null,&#xd;
+        &quot;skill&quot;: &quot;Run3&quot;,&#xd;
+        &quot;skillExprncMnth&quot;: 38,&#xd;
+        &quot;skillPrfcncy&quot;: null,&#xd;
+        &quot;skillStrength&quot;: 0.8,&#xd;
+        &quot;skillOccurrence&quot;: null,&#xd;
+        &quot;skillIndex&quot;: null,&#xd;
+        &quot;skillRecencyGap&quot;: null,&#xd;
+        &quot;createdBy&quot;: null,&#xd;
+        &quot;createdOn&quot;: null,&#xd;
+        &quot;updatedBy&quot;: null,&#xd;
+        &quot;updatedOn&quot;: null,&#xd;
+        &quot;flowId&quot;: null&#xd;
+      }],&#xd;
+      &quot;hasMore&quot;: false,&#xd;
+      &quot;totalResults&quot;: 0&#xd;
+    },&#xd;
+    &quot;candidateProjectMapBean&quot;: null,&#xd;
+    &quot;requisitionCandidateMappingBean&quot;: null&#xd;
+  },&#xd;
+  &quot;social&quot;: {&#xd;
+   &#xd;
+    &quot;interests&quot;: [&#xd;
+      &quot;cricket&quot;&#xd;
+    ],&#xd;
+    &quot;hobbies&quot;: [&#xd;
+      &quot;movies&quot;&#xd;
+    ],&#xd;
+    &quot;professionalSummary&quot;: &quot;test&quot;,&#xd;
+    &quot;objective&quot;: &quot;test&quot;,&#xd;
+    &quot;stackoverflowRank&quot;: 44,&#xd;
+    &quot;imageUrl&quot;: &quot;http://facebook.com&quot;,&#xd;
+    &quot;linkedinUrl&quot;: &quot;http://facebook.com&quot;,&#xd;
+    &quot;twitterUrl&quot;: &quot;http://facebook.com&quot;,&#xd;
+    &quot;facebookUrl&quot;: &quot;http://facebook.com&quot;,&#xd;
+    &quot;blogLink&quot;: &quot;http://facebook.org&quot;,&#xd;
+&#xd;
+    &quot;followers&quot;: [{&#xd;
+      &quot;connectType&quot;: &quot;string&quot;,&#xd;
+      &quot;connectName&quot;: &quot;string&quot;,&#xd;
+      &quot;email&quot;: &quot;string@gmail.com&quot;,&#xd;
+      &quot;mobileNumber&quot;: &quot;9066812182&quot;,&#xd;
+      &quot;connectURL&quot;: &quot;http://facebook.com&quot;,&#xd;
+      &quot;imageURL&quot;: &quot;http://facebook.com&quot;,&#xd;
+      &quot;createdBy&quot;: &quot;string&quot;,&#xd;
+      &quot;modifiedBy&quot;: &quot;string&quot;&#xd;
+    }],&#xd;
+    &quot;following&quot;: [{&#xd;
+      &quot;connectType&quot;: &quot;string&quot;,&#xd;
+      &quot;connectName&quot;: &quot;string&quot;,&#xd;
+      &quot;email&quot;: &quot;string@gmail.com&quot;,&#xd;
+      &quot;mobileNumber&quot;: &quot;9066812182&quot;,&#xd;
+      &quot;connectURL&quot;: &quot;http://facebook.com&quot;,&#xd;
+      &quot;imageURL&quot;: &quot;http://facebook.com&quot;,&#xd;
+      &quot;createdBy&quot;: &quot;string&quot;,&#xd;
+      &quot;modifiedBy&quot;: &quot;string&quot;&#xd;
+    }],&#xd;
+    &quot;socialExt&quot;: {&#xd;
+      &quot;linkedInConnectionsCount&quot;: 1,&#xd;
+      &quot;originalGithubRepoCount&quot;: 2,&#xd;
+      &quot;stackoverflowBadgeCount&quot;: 3,&#xd;
+      &quot;githubPublicRepos&quot;: 4,&#xd;
+      &quot;githubFollowersCount&quot;: 5,&#xd;
+      &quot;githubFollowingCount&quot;: 6,&#xd;
+      &quot;stackoverflowReputationPoints&quot;: 7,&#xd;
+      &quot;stackoverflowUserId&quot;: &quot;so.com&quot;,&#xd;
+      &quot;askUbuntuUserId&quot;: &quot;au.com&quot;,&#xd;
+      &quot;githubUserId&quot;: &quot;gu.com&quot;&#xd;
+    }&#xd;
+  }&#xd;
+&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">192.168.2.183</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">profiles-web/api/profiles</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+          <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+          <stringProp name="RegexExtractor.refname">serviceResponse</stringProp>
+          <stringProp name="RegexExtractor.regex">(.*)</stringProp>
+          <stringProp name="RegexExtractor.template">$1$</stringProp>
+          <stringProp name="RegexExtractor.default"></stringProp>
+          <stringProp name="RegexExtractor.match_number"></stringProp>
+        </RegexExtractor>
+        <hashTree/>
+        <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <boolProp name="resetInterpreter">false</boolProp>
+          <stringProp name="script">import org.apache.commons.io.FileUtils;
+
+String data = vars.get(&quot;serviceResponse&quot;);
+
+FileUtils.writeStringToFile(new File(&quot;E:/Spire/Jmeter/Results/Label/AttachLabel/data/pro.txt&quot;),new String(data) + System.getProperty(&quot;line.separator&quot;), true);</stringProp>
+        </BeanShellPostProcessor>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>false</time>
+              <latency>false</latency>
+              <timestamp>false</timestamp>
+              <success>false</success>
+              <label>false</label>
+              <code>false</code>
+              <message>false</message>
+              <threadName>false</threadName>
+              <dataType>false</dataType>
+              <encoding>false</encoding>
+              <assertions>false</assertions>
+              <subresults>false</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <threadCounts>true</threadCounts>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

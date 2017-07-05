@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.8" jmeter="2.13 r1665067">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Labels GC Testing" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">20</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">10</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">5</stringProp>
+        <longProp name="ThreadGroup.start_time">1466679839000</longProp>
+        <longProp name="ThreadGroup.end_time">1466679839000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Logica Header" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Authorization</stringProp>
+              <stringProp name="Header.value">Bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiI1N2FkN2JkNC0xY2QwLTRkOGQtOWQyMi1hMWU4MWE3YTEyN2QiLCJleHAiOjE0Njc3NzU1MzQsIm5iZiI6MCwiaWF0IjoxNDYzNDU1NTM0LCJpc3MiOiJodHRwOi8vMTcyLjE2LjAuMjE2OjgwODAvYXV0aC9yZWFsbXMvUmVhbG0xIiwiYXVkIjoidXNlci1zZXJ2aWNlIiwic3ViIjoiZGFmZDY2YWItMTFmMS00NzMwLWE3NDQtMDNjNDc1OGE5ZGMwIiwiYXpwIjoidXNlci1zZXJ2aWNlIiwic2Vzc2lvbl9zdGF0ZSI6ImI2Yjc0YmY0LWI0YzEtNDZmMS04OTBlLWQyZWI5YmU3NDU2MyIsImNsaWVudF9zZXNzaW9uIjoiNWZlMmMzODItMjUxNS00YWI3LThlNzYtNDUxNWM1ODZiZjM2IiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVzb3VyY2VfYWNjZXNzIjp7ImNybS1ydWxlcyI6eyJyb2xlcyI6WyJhZG1pbiJdfSwiY3JtLWFjdGl2aXR5c3RyZWFtIjp7InJvbGVzIjpbImFkbWluIl19LCJzZWN1cml0eS1hZG1pbi1jb25zb2xlIjp7InJvbGVzIjpbImFkbWluIl19LCJibG9iLXN0b3JlLXdlYiI6eyJyb2xlcyI6WyJhZG1pbiJdfSwiY3JtLWNvbS1zZXJ2aWNlcyI6eyJyb2xlcyI6WyJhZG1pbiJdfSwic29jaWFsLXdlYiI6eyJyb2xlcyI6WyJhZG1pbiJdfSwiY3JtLWNvbS1iaXotc2VydmljZXMiOnsicm9sZXMiOlsiYWRtaW4iXX0sImNybS11c2VyLXNlcnZpY2UiOnsicm9sZXMiOlsiYWRtaW4iXX0sInRhbGVudC1lbnRpdHktbGF5ZXIiOnsicm9sZXMiOlsiYWRtaW4iXX0sImxhYmVscy1iaXotd2ViIjp7InJvbGVzIjpbImFkbWluIl19LCJzZWFyY2gtYW5kLW1hdGNoLXNlcnZpY2UiOnsicm9sZXMiOlsiYWRtaW4iXX0sImNybS1waXBlbGluZSI6eyJyb2xlcyI6WyJhZG1pbiJdfSwiY3JtLXNlYXJjaC1iaXotd2ViIjp7InJvbGVzIjpbImFkbWluIl19LCJjcm0tZW1haWxzIjp7InJvbGVzIjpbImFkbWluIl19LCJzYXZlLXNlYXJjaCI6eyJyb2xlcyI6WyJhZG1pbiJdfSwidGFsZW50LWJpei1MYXllciI6eyJyb2xlcyI6WyJhZG1pbiJdfSwicHJvZmlsZXMtd2ViIjp7InJvbGVzIjpbImFkbWluIl19LCJjcm0tam9icG9zdC13ZWIiOnsicm9sZXMiOlsiYWRtaW4iXX0sImNybS1wcm9maWxlcyI6eyJyb2xlcyI6WyJhZG1pbiJdfSwicHJvZmlsZS1iaXotd2ViIjp7InJvbGVzIjpbImFkbWluIl19LCJhY3Rpdml0eS1zdHJlYW0td2ViIjp7InJvbGVzIjpbImFkbWluIl19LCJjcm0tY2FtcGFpZ24tYml6Ijp7InJvbGVzIjpbImFkbWluIl19LCJjcm0tbm90ZXMtd2ViIjp7InJvbGVzIjpbImFkbWluIl19LCJjcm0tY2FtcGFpZ24tc2VydmljZXMiOnsicm9sZXMiOlsiYWRtaW4iXX0sImNybS1ub3RpZmljYXRpb24td2ViIjp7InJvbGVzIjpbImFkbWluIl19LCJicm9rZXIiOnsicm9sZXMiOlsicmVhZC10b2tlbiJdfSwibGFiZWxzLXdlYiI6eyJyb2xlcyI6WyJhZG1pbiJdfSwiY3JtLWNhbXBhaWducyI6eyJyb2xlcyI6WyJhZG1pbiJdfSwic3BpcmUtYml6Ijp7InJvbGVzIjpbImFkbWluIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50Iiwidmlldy1wcm9maWxlIl19fSwibmFtZSI6InRlc3RlciBsb2dpY2EiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0ZXN0ZXJAbG9naWNhLmNvbSIsImdpdmVuX25hbWUiOiJ0ZXN0ZXIiLCJmYW1pbHlfbmFtZSI6ImxvZ2ljYSIsImVtYWlsIjoidGVzdGVyQGxvZ2ljYS5jb20ifQ.EfrKMavdGSQXKEat4d_fvEE0YB0u4IuUn2LYvC4z4gDwR67QbQ4yjF3UkYt3-Ll_3ESbxGssgXjRvTV-BifC2hfSMESsNP-TbcJBEVcyMsRlJYu17Nx60DF3CVwIwjuGN9_LvXS1VADILXtd__LslxwSOMept6sTEO5fF7id4SqYjGESV4cdUIxGiPRgm2srEszON3oHf7B4rk3ukcMApXxg2MFppPVlIp5jKdmhhbMhoAcl8-5U59UvCXVkNGH39dAqp6s3xGindUGlr81bV4c0bCKiRrfvTYl6hvcR8xNE425PSmhJs3BAd1wqpLb1ueuQT5qtCAq5aM6TcvsaaA</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">realmName</stringProp>
+              <stringProp name="Header.value">Realm1</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name"></stringProp>
+              <stringProp name="Header.value"></stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="bulk add label request" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;entityIds&quot;: {&#xd;
+    &quot;items&quot;: [&#xd;
+     &quot;6002:6005:fb2887de225f4dc6ab1ed2efc274b0de&quot;,&#xd;
+&quot;6002:6005:feedb0695f5b404293c19b4a855b82ee&quot;,&#xd;
+&quot;6002:6005:9971f0442305405bb7a177cf89b173ac&quot;,&#xd;
+&quot;6002:6005:54a3582042544f49a2953dc6d49f90eb&quot;,&#xd;
+&quot;6002:6005:0cc3419df7f4499887e43b49162cfa9d&quot;,&#xd;
+&quot;6002:6005:60e4246b57234b68bd2fd2f82e2fcdf6&quot;,&#xd;
+&quot;6002:6005:7a4767620fca4f22b33100e9e5ecc2a0&quot;,&#xd;
+&quot;6002:6005:ff5d7e46cf7e400791f4213810d75fb8&quot;,&#xd;
+&quot;6002:6005:edc757a209344061bd2950370047763b&quot;,&#xd;
+&quot;6002:6005:94347a9afeeb40c9b0e930d20d99af82&quot;,&#xd;
+&quot;6002:6005:27cb8219bb0947c780ff96a04384f25b&quot;,&#xd;
+&quot;6002:6005:2472874f4d074a608b2ff0d7971537c8&quot;,&#xd;
+&quot;6002:6005:69fc55dfe7e34753b2add96499f233ab&quot;,&#xd;
+&quot;6002:6005:76e116452cc34a4cb4a3ad431fd4522e&quot;,&#xd;
+&quot;6002:6005:686b5e0ff45d40fda55c3fc472459690&quot;,&#xd;
+&quot;6002:6005:b5615cdf49544ff3847fda70b28cbe12&quot;,&#xd;
+&quot;6002:6005:6c35799c32904acbb11b67584d187464&quot;,&#xd;
+&quot;6002:6005:650d69e0251b4ed8a03fa0f275e277f7&quot;,&#xd;
+&quot;6002:6005:2e26bb21ff084b12a98b49a9db1af454&quot;,&#xd;
+&quot;6002:6005:0972b915dc334baf832250432abfedb4&quot;,&#xd;
+&quot;6002:6005:a42d51fde79f4efd8160ebe5108b192e&quot;,&#xd;
+&quot;6002:6005:958b47d3693442ec8efe71e221906110&quot;,&#xd;
+&quot;6002:6005:f89054d6677442939b1a91fbeb2d7d9a&quot;,&#xd;
+&quot;6002:6005:343ff328a1874a89acd98fb51b146089&quot;,&#xd;
+&quot;6002:6005:e91817a70ddb485ea282170ebd20598b&quot;,&#xd;
+&quot;6002:6005:8f437145b6314fcd81827ecb18959156&quot;,&#xd;
+&quot;6002:6005:af3656a348f7472586cef49cf85667e3&quot;,&#xd;
+&quot;6002:6005:8895f519f56e424fa7c76c30deb6a58d&quot;,&#xd;
+&quot;6002:6005:eb99794696a043c9afb7d52cf6072009&quot;,&#xd;
+&quot;6002:6005:39bd0e92292d44dca70ecb930d3e7e03&quot;,&#xd;
+&quot;6002:6005:1d134eb962ba41fa9a9b0fd1c8448c50&quot;,&#xd;
+&quot;6002:6005:6078c9d7ac874d5bb2e545e00a2594e0&quot;,&#xd;
+&quot;6002:6005:5040237197b0481ebbfbe72357422c69&quot;,&#xd;
+&quot;6002:6005:c04cf6952e99424fbd0b74e2a6c81b2f&quot;,&#xd;
+&quot;6002:6005:be909505ab4f4ad38b58807882ff6467&quot;,&#xd;
+&quot;6002:6005:79da7e065bcf407aa750ee08289cf024&quot;,&#xd;
+&quot;6002:6005:131bad9679e5447987c1e38b8aa0acdb&quot;,&#xd;
+&quot;6002:6005:4e615d3c399c433ebb7dfda4239f5142&quot;,&#xd;
+&quot;6002:6005:f5dde8a059ba41a28e7747c4bc68eeac&quot;,&#xd;
+&quot;6002:6005:a99b8740e7ed4fe0b0aee3a8a6157513&quot;,&#xd;
+&quot;6002:6005:d7a56eb4dbad4de28851bd74792665b4&quot;,&#xd;
+&quot;6002:6005:bfe91ddaf4874ed3a470377ca3b61a63&quot;,&#xd;
+&quot;6002:6005:5b88d5b6df474e9f84d7464814185c5b&quot;,&#xd;
+&quot;6002:6005:83e0294fcbad41c98321eede14440765&quot;,&#xd;
+&quot;6002:6005:387343b165734923b1222c64e4ab1b85&quot;,&#xd;
+&quot;6002:6005:a9acf7f276924bf5ac743d6d14f0b38f&quot;,&#xd;
+&quot;6002:6005:c43a719e072942e7a53cbb0ed3e6289c&quot;,&#xd;
+&quot;6002:6005:f9479899c6e545aca704c4e88c09356b&quot;,&#xd;
+&quot;6002:6005:48fe9c7dc8434a4eb912982fef0ff3a5&quot;,&#xd;
+&quot;6002:6005:3cca13fd4b1b4a64806b37e8e8d983d1&quot;,&#xd;
+&quot;6002:6005:9ff7b0d936ae462ab3f106b2db5972c0&quot;,&#xd;
+&quot;6002:6005:13c21e1277604e168dcfdc4873d05fb3&quot;,&#xd;
+&quot;6002:6005:45769bee8606410bbb30e51810e9ff2d&quot;,&#xd;
+&quot;6002:6005:6a8aa9e7c3414a07bcf0b84a44603f48&quot;,&#xd;
+&quot;6002:6005:f570d7bb66654a1796f146151f32bc04&quot;,&#xd;
+&quot;6002:6005:d468da070e71497eb8175abd24669f8a&quot;,&#xd;
+&quot;6002:6005:ffb8696554884357a4e441f101b3243a&quot;,&#xd;
+&quot;6002:6005:55e94b6a6afb42269a82816e11b41267&quot;,&#xd;
+&quot;6002:6005:4778b14e54aa414487e9a62c40a03aac&quot;,&#xd;
+&quot;6002:6005:e1892424729747fa8e50b7496f5c1daf&quot;,&#xd;
+&quot;6002:6005:3db9c43a90734aa7a6b059487c513411&quot;,&#xd;
+&quot;6002:6005:c485bc971f0142048cd2b409cd9711bb&quot;,&#xd;
+&quot;6002:6005:b53e8a037f2746cbab6dacc4cb34c2ca&quot;,&#xd;
+&quot;6002:6005:b971c8aa4ece4bb4a546fa35b02aa59e&quot;,&#xd;
+&quot;6002:6005:8ff7be2d617e4237b8b2ac347f0666dd&quot;,&#xd;
+&quot;6002:6005:95c8149e5e3f42c5bdac94b1981fc2c2&quot;,&#xd;
+&quot;6002:6005:35ce0294dbca474197102c68f18be442&quot;,&#xd;
+&quot;6002:6005:1b2ef60bfc2f4c35a0b5f386a3824368&quot;,&#xd;
+&quot;6002:6005:d7c40b498b36494aa3c503985efc4b18&quot;,&#xd;
+&quot;6002:6005:ca41f44278fa417c8f90cfefeadd8227&quot;,&#xd;
+&quot;6002:6005:b365dc7e029b4e378bfa1c1517263e05&quot;,&#xd;
+&quot;6002:6005:12eb4e75654841beae316e6062b3f625&quot;,&#xd;
+&quot;6002:6005:a07f84c9dee54d75b5a49b1d4ae19702&quot;,&#xd;
+&quot;6002:6005:8d6b6550c9204549957716e93d2cf279&quot;,&#xd;
+&quot;6002:6005:57b6d0618c734e1ea42d53f16a92bc33&quot;,&#xd;
+&quot;6002:6005:d74b2c50403e4985a5aefa0c94a190b1&quot;,&#xd;
+&quot;6002:6005:1e0d27e059044a30b1c9da4dbe6cf2a2&quot;,&#xd;
+&quot;6002:6005:76599cb4e23c4634aa31f935a5e1f54b&quot;,&#xd;
+&quot;6002:6005:7241455632214fdeacba86e5c38a77e1&quot;,&#xd;
+&quot;6002:6005:f8ddc238c5c7429db229afcfd59a0c82&quot;,&#xd;
+&quot;6002:6005:4c30c3a012e545c58ee6dd71a8a12b3d&quot;,&#xd;
+&quot;6002:6005:922b660e5c284e74a6f033fe3179bc8e&quot;,&#xd;
+&quot;6002:6005:c16e00322b7f4ce19179c2b8da7a2a03&quot;,&#xd;
+&quot;6002:6005:1d695c664a5340eca8a4e85425918c3b&quot;,&#xd;
+&quot;6002:6005:d7025f8634bf475eb202644944cfc5f4&quot;,&#xd;
+&quot;6002:6005:289d5fd0c1c7409aa281791f9161dccc&quot;,&#xd;
+&quot;6002:6005:49ae44ae04cc45829949d94ba4febc0c&quot;,&#xd;
+&quot;6002:6005:65032229e1f0419e9d63e0f72bdaa010&quot;,&#xd;
+&quot;6002:6005:f6f57a552f3943b595c62188b3e18bba&quot;,&#xd;
+&quot;6002:6005:4f0d51c57a0041feb800a6da0ff5d033&quot;,&#xd;
+&quot;6002:6005:f3f7eecf130c44bb8c55e9f46a16c222&quot;&#xd;
+    ]&#xd;
+  },&#xd;
+  &quot;labelNames&quot;: {&#xd;
+    &quot;items&quot;: [ &#xd;
+      &quot;LablePT ${__UUID}&quot;&#xd;
+    ]&#xd;
+  }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">192.168.2.75</stringProp>
+          <stringProp name="HTTPSampler.port">8182</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">spire-biz/labels-biz/api/labels/_attachbulk</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
